@@ -6,7 +6,7 @@
   </option>
 
   <visual>
-    <headlight diffuse="0.6 0.6 0.6" ambient="0.3 0.3 0.3" specular="0 0 0"/>
+    <headlight diffuse="0.5 0.5 0.5" ambient="0.25 0.25 0.25" specular="0 0 0"/>
     <rgba haze="0.15 0.25 0.35 1"/>
     <global offwidth="1920" offheight="1080"/>
     <quality shadowsize="2048"/>
@@ -15,11 +15,11 @@
 
   <asset>
     <!-- Textures -->
-    <texture type="skybox" builtin="gradient" rgb1="0.3 0.5 0.7" rgb2="0.0 0.0 0.0" width="512" height="512"/>
-    <texture name="floor_texture" type="2d" builtin="checker" rgb1="0.55 0.6 0.62" rgb2="0.48 0.52 0.55" width="512" height="512" mark="edge" markrgb="0.4 0.42 0.45"/>
-    <texture name="wall_tile_blue" type="2d" builtin="checker" rgb1="0.7 0.85 0.9" rgb2="0.65 0.8 0.85" width="512" height="512"/>
-    <texture name="wall_tile_green" type="2d" builtin="checker" rgb1="0.75 0.88 0.8" rgb2="0.7 0.83 0.75" width="512" height="512"/>
-    <texture name="wall_upper" type="2d" builtin="flat" rgb1="0.95 0.97 0.98" width="512" height="512"/>
+    <texture type="skybox" builtin="gradient" rgb1="0.4 0.45 0.5" rgb2="0.2 0.25 0.3" width="512" height="512"/>
+    <texture name="floor_texture" type="2d" builtin="checker" rgb1="0.45 0.48 0.42" rgb2="0.38 0.42 0.36" width="512" height="512" mark="edge" markrgb="0.32 0.35 0.30"/>
+    <texture name="wall_tile_blue" type="2d" builtin="checker" rgb1="0.55 0.70 0.75" rgb2="0.50 0.65 0.70" width="512" height="512"/>
+    <texture name="wall_tile_green" type="2d" builtin="checker" rgb1="0.60 0.72 0.65" rgb2="0.55 0.67 0.60" width="512" height="512"/>
+    <texture name="wall_upper" type="2d" builtin="flat" rgb1="0.78 0.82 0.80" width="512" height="512"/>
     <texture name="metal_texture" type="2d" builtin="flat" rgb1="0.7 0.75 0.8" width="256" height="256"/>
     <texture name="brushed_metal" type="2d" builtin="checker" rgb1="0.75 0.78 0.82" rgb2="0.72 0.75 0.79" width="256" height="256" mark="edge" markrgb="0.65 0.68 0.72"/>
     <texture name="chrome" type="2d" builtin="flat" rgb1="0.85 0.88 0.92" width="256" height="256"/>
@@ -29,27 +29,22 @@
     <material name="wall_tile_blue_mat" texture="wall_tile_blue" specular="0.4" shininess="0.6" reflectance="0.15"/>
     <material name="wall_tile_green_mat" texture="wall_tile_green" specular="0.4" shininess="0.6" reflectance="0.15"/>
     <material name="wall_upper_mat" texture="wall_upper" specular="0.2" shininess="0.3"/>
-    <material name="table_mat" rgba="0.88 0.90 0.93 1" specular="0.6" shininess="0.7"/>
+    <material name="table_mat" rgba="0.70 0.72 0.75 1" specular="0.6" shininess="0.7"/>
     <material name="metal_mat" texture="metal_texture" specular="0.9" shininess="0.9" reflectance="0.3"/>
     <material name="brushed_metal_mat" texture="brushed_metal" specular="0.7" shininess="0.8" reflectance="0.4"/>
     <material name="chrome_mat" texture="chrome" specular="1.0" shininess="1.0" reflectance="0.6"/>
-    <material name="equipment_mat" rgba="0.8 0.85 0.9 1" specular="0.4" shininess="0.6"/>
+    <material name="equipment_mat" rgba="0.68 0.72 0.75 1" specular="0.4" shininess="0.6"/>
     <material name="light_mat" rgba="0.95 0.95 1.0 1" emission="1.5"/>
-    <material name="xray_mat" rgba="0.95 0.97 1.0 1" emission="0.8"/>
     <material name="green_mat" rgba="0.2 0.6 0.3 1" specular="0.2" shininess="0.3"/>
     <material name="blue_accent" rgba="0.2 0.4 0.7 1" specular="0.5" shininess="0.6"/>
     <material name="red_accent" rgba="0.8 0.2 0.2 1" specular="0.4" shininess="0.5"/>
     <material name="yellow_warning" rgba="0.95 0.85 0.2 1" specular="0.3" shininess="0.4"/>
-    <material name="screen_mat" rgba="0.1 0.1 0.1 1" emission="0.3"/>
-    <material name="gas_oxygen" rgba="1 1 1 1" specular="0.1" shininess="0.1"/>
-    <material name="gas_suction" rgba="1 1 0 1" specular="0.1" shininess="0.1"/>
-    <material name="gas_air" rgba="0 0 0 1" specular="0.1" shininess="0.1"/>
   </asset>
 
   <worldbody>
     <!-- Lighting -->
-    <light directional="true" diffuse="0.8 0.8 0.8" specular="0.3 0.3 0.3" pos="0 0 5" dir="0 0 -1" castshadow="false"/>
-    <light directional="true" diffuse="0.4 0.4 0.4" specular="0.1 0.1 0.1" pos="3 3 4" dir="-1 -1 -1"/>
+    <light directional="true" diffuse="0.6 0.6 0.58" specular="0.2 0.2 0.2" pos="0 0 5" dir="0 0 -1" castshadow="false"/>
+    <light directional="true" diffuse="0.35 0.35 0.33" specular="0.1 0.1 0.1" pos="3 3 4" dir="-1 -1 -1"/>
 
     <!-- Floor -->
     <geom name="floor" type="plane" size="6 6 0.1" material="floor_mat" condim="3"/>
@@ -72,6 +67,117 @@
     <geom name="wall_front_left_upper" type="box" pos="-3.5 5.9 2.1" size="2.4 0.1 0.9" material="wall_upper_mat"/>
     <geom name="wall_front_right_lower" type="box" pos="3.5 5.9 0.6" size="2.4 0.1 0.6" material="wall_tile_blue_mat"/>
     <geom name="wall_front_right_upper" type="box" pos="3.5 5.9 2.1" size="2.4 0.1 0.9" material="wall_upper_mat"/>
+
+    <!-- Automatic Sliding Door System -->
+    <body name="sliding_door_system" pos="0 5.9 0">
+      <!-- Left door frame (hollow frame structure) -->
+      <geom name="door_frame_left_inner" type="box" pos="-1.0 -0.05 1.5" size="0.04 0.04 1.5" material="brushed_metal_mat"/>
+      <geom name="door_frame_left_outer" type="box" pos="-1.0 0.05 1.5" size="0.04 0.04 1.5" material="brushed_metal_mat"/>
+      <geom name="door_frame_left_front" type="box" pos="-0.96 0 1.5" size="0.04 0.1 1.5" rgba="0.70 0.73 0.76 1"/>
+      <geom name="door_frame_left_back" type="box" pos="-1.04 0 1.5" size="0.04 0.1 1.5" rgba="0.70 0.73 0.76 1"/>
+
+      <!-- Right door frame (hollow frame structure) -->
+      <geom name="door_frame_right_inner" type="box" pos="1.0 -0.05 1.5" size="0.04 0.04 1.5" material="brushed_metal_mat"/>
+      <geom name="door_frame_right_outer" type="box" pos="1.0 0.05 1.5" size="0.04 0.04 1.5" material="brushed_metal_mat"/>
+      <geom name="door_frame_right_front" type="box" pos="0.96 0 1.5" size="0.04 0.1 1.5" rgba="0.70 0.73 0.76 1"/>
+      <geom name="door_frame_right_back" type="box" pos="1.04 0 1.5" size="0.04 0.1 1.5" rgba="0.70 0.73 0.76 1"/>
+
+      <!-- Top door frame (hollow frame structure) -->
+      <geom name="door_frame_top_left" type="box" pos="-0.5 -0.05 3.0" size="0.5 0.04 0.04" material="brushed_metal_mat"/>
+      <geom name="door_frame_top_right" type="box" pos="0.5 -0.05 3.0" size="0.5 0.04 0.04" material="brushed_metal_mat"/>
+      <geom name="door_frame_top_outer" type="box" pos="0 0.05 3.0" size="1.04 0.04 0.04" material="brushed_metal_mat"/>
+      <geom name="door_frame_top_front" type="box" pos="0 0 3.04" size="1.08 0.1 0.04" rgba="0.70 0.73 0.76 1"/>
+      <geom name="door_frame_top_back" type="box" pos="0 0 2.96" size="1.08 0.1 0.04" rgba="0.70 0.73 0.76 1"/>
+
+      <!-- Corner reinforcements -->
+      <geom name="door_corner_tl" type="box" pos="-1.0 0 3.0" size="0.05 0.05 0.05" material="chrome_mat"/>
+      <geom name="door_corner_tr" type="box" pos="1.0 0 3.0" size="0.05 0.05 0.05" material="chrome_mat"/>
+
+      <!-- Top rail housing -->
+      <geom name="door_rail_housing" type="box" pos="0 -0.05 2.95" size="0.95 0.08 0.08" rgba="0.65 0.68 0.72 1"/>
+      <geom name="door_rail" type="box" pos="0 -0.05 2.92" size="0.9 0.06 0.02" material="chrome_mat"/>
+
+      <!-- Left door panel (partially open position) -->
+      <geom name="door_left_panel1" type="box" pos="-0.65 0 1.45" size="0.15 0.04 1.45" rgba="0.25 0.45 0.65 1"/>
+      <geom name="door_left_panel2" type="box" pos="-0.42 0.03 1.45" size="0.15 0.03 1.45" rgba="0.22 0.42 0.62 1"/>
+      <geom name="door_left_edge" type="box" pos="-0.80 0 1.45" size="0.02 0.045 1.45" material="chrome_mat"/>
+
+      <!-- Right door panel (partially open position) -->
+      <geom name="door_right_panel1" type="box" pos="0.65 0 1.45" size="0.15 0.04 1.45" rgba="0.25 0.45 0.65 1"/>
+      <geom name="door_right_panel2" type="box" pos="0.42 0.03 1.45" size="0.15 0.03 1.45" rgba="0.22 0.42 0.62 1"/>
+      <geom name="door_right_edge" type="box" pos="0.80 0 1.45" size="0.02 0.045 1.45" material="chrome_mat"/>
+
+      <!-- Door rollers/hangers -->
+      <geom name="door_roller_left1" type="cylinder" pos="-0.65 -0.04 2.88" size="0.02 0.03" rgba="0.3 0.3 0.3 1" euler="90 0 0"/>
+      <geom name="door_roller_left2" type="cylinder" pos="-0.42 -0.04 2.88" size="0.02 0.03" rgba="0.3 0.3 0.3 1" euler="90 0 0"/>
+      <geom name="door_roller_right1" type="cylinder" pos="0.65 -0.04 2.88" size="0.02 0.03" rgba="0.3 0.3 0.3 1" euler="90 0 0"/>
+      <geom name="door_roller_right2" type="cylinder" pos="0.42 -0.04 2.88" size="0.02 0.03" rgba="0.3 0.3 0.3 1" euler="90 0 0"/>
+
+      <!-- Motion sensor at top -->
+      <geom name="door_sensor_housing" type="box" pos="0 -0.08 2.8" size="0.08 0.05 0.06" rgba="0.25 0.28 0.32 1"/>
+      <geom name="door_sensor_lens" type="box" pos="0 -0.1 2.8" size="0.05 0.01 0.04" rgba="0.1 0.1 0.15 0.7"/>
+      <geom name="door_sensor_indicator" type="cylinder" pos="0 -0.105 2.84" size="0.006 0.005" material="green_mat" euler="90 0 0"/>
+
+      <!-- Interior control panel (inside the room) -->
+      <body name="door_control_interior" pos="-1.15 -0.3 1.3">
+        <!-- Control panel housing -->
+        <geom name="int_panel_housing" type="box" pos="0 0 0" size="0.08 0.03 0.15" rgba="0.65 0.68 0.72 1"/>
+        <geom name="int_panel_face" type="box" pos="0 0.025 0" size="0.075 0.01 0.14" rgba="0.25 0.28 0.32 1"/>
+
+        <!-- Open button (green) -->
+        <geom name="int_btn_open" type="cylinder" pos="0 0.03 0.06" size="0.02 0.008" material="green_mat" euler="90 0 0"/>
+        <geom name="int_btn_open_icon" type="box" pos="0 0.035 0.06" size="0.008 0.003 0.012" rgba="0.9 0.9 0.9 1"/>
+
+        <!-- Close button (red) -->
+        <geom name="int_btn_close" type="cylinder" pos="0 0.03 0" size="0.02 0.008" material="red_accent" euler="90 0 0"/>
+        <geom name="int_btn_close_icon" type="box" pos="0 0.035 0" size="0.012 0.003 0.008" rgba="0.9 0.9 0.9 1"/>
+
+        <!-- Emergency stop button (yellow) -->
+        <geom name="int_btn_stop" type="cylinder" pos="0 0.03 -0.06" size="0.02 0.008" material="yellow_warning" euler="90 0 0"/>
+
+        <!-- Status indicator LEDs -->
+        <geom name="int_led_power" type="cylinder" pos="0 0.032 0.11" size="0.005 0.005" material="blue_accent" euler="90 0 0"/>
+        <geom name="int_led_status" type="cylinder" pos="0.025 0.032 0.11" size="0.005 0.005" material="green_mat" euler="90 0 0"/>
+
+        <!-- Label -->
+        <geom name="int_panel_label" type="box" pos="0 0.032 -0.11" size="0.06 0.003 0.02" rgba="0.9 0.9 0.9 1"/>
+      </body>
+
+      <!-- Exterior control panel (outside the room) -->
+      <body name="door_control_exterior" pos="1.15 0.3 1.3">
+        <!-- Control panel housing -->
+        <geom name="ext_panel_housing" type="box" pos="0 0 0" size="0.08 0.03 0.15" rgba="0.65 0.68 0.72 1"/>
+        <geom name="ext_panel_face" type="box" pos="0 -0.025 0" size="0.075 0.01 0.14" rgba="0.25 0.28 0.32 1"/>
+
+        <!-- Open button (green) -->
+        <geom name="ext_btn_open" type="cylinder" pos="0 -0.03 0.06" size="0.02 0.008" material="green_mat" euler="90 0 0"/>
+        <geom name="ext_btn_open_icon" type="box" pos="0 -0.035 0.06" size="0.008 0.003 0.012" rgba="0.9 0.9 0.9 1"/>
+
+        <!-- Close button (red) -->
+        <geom name="ext_btn_close" type="cylinder" pos="0 -0.03 0" size="0.02 0.008" material="red_accent" euler="90 0 0"/>
+        <geom name="ext_btn_close_icon" type="box" pos="0 -0.035 0" size="0.012 0.003 0.008" rgba="0.9 0.9 0.9 1"/>
+
+        <!-- Emergency call button (blue) -->
+        <geom name="ext_btn_call" type="cylinder" pos="0 -0.03 -0.06" size="0.02 0.008" material="blue_accent" euler="90 0 0"/>
+
+        <!-- Status indicator LEDs -->
+        <geom name="ext_led_power" type="cylinder" pos="0 -0.032 0.11" size="0.005 0.005" material="blue_accent" euler="90 0 0"/>
+        <geom name="ext_led_occupied" type="cylinder" pos="0.025 -0.032 0.11" size="0.005 0.005" material="red_accent" euler="90 0 0"/>
+
+        <!-- Label -->
+        <geom name="ext_panel_label" type="box" pos="0 -0.032 -0.11" size="0.06 0.003 0.02" rgba="0.9 0.9 0.9 1"/>
+      </body>
+
+      <!-- Access card reader (exterior) -->
+      <geom name="card_reader_housing" type="box" pos="0.9 0.25 1.2" size="0.06 0.03 0.1" rgba="0.25 0.28 0.32 1"/>
+      <geom name="card_reader_slot" type="box" pos="0.9 0.26 1.15" size="0.045 0.01 0.005" rgba="0.1 0.1 0.1 1"/>
+      <geom name="card_reader_screen" type="box" pos="0.9 0.26 1.23" size="0.04 0.005 0.04" rgba="0.1 0.4 0.3 1"/>
+
+      <!-- Safety warning signs -->
+      <geom name="door_warning_sign" type="box" pos="0 -0.09 0.3" size="0.12 0.01 0.12" material="yellow_warning"/>
+      <geom name="door_warning_stripe1" type="box" pos="-0.5 0 0.05" size="0.03 0.045 0.05" rgba="0.95 0.85 0.2 1"/>
+      <geom name="door_warning_stripe2" type="box" pos="0.5 0 0.05" size="0.03 0.045 0.05" rgba="0.95 0.85 0.2 1"/>
+    </body>
     <!-- Baseboards -->
     <geom name="baseboard_back" type="box" pos="0 -5.85 0.05" size="6 0.05 0.05" rgba="0.3 0.35 0.4 1"/>
     <geom name="baseboard_left" type="box" pos="-5.85 0 0.05" size="0.05 6 0.05" rgba="0.3 0.35 0.4 1"/>
@@ -100,9 +206,9 @@
       <geom name="table_section2" type="box" pos="0.1 0 0.91" size="0.25 0.38 0.015" material="table_mat"/>
       <geom name="table_section3" type="box" pos="0.55 0 0.91" size="0.2 0.38 0.015" material="table_mat"/>
       <!-- Cushion/mattress with segments -->
-      <geom name="table_mattress1" type="box" pos="-0.3 0 0.94" size="0.24 0.36 0.015" rgba="0.25 0.45 0.65 1"/>
-      <geom name="table_mattress2" type="box" pos="0.1 0 0.94" size="0.24 0.36 0.015" rgba="0.25 0.45 0.65 1"/>
-      <geom name="table_mattress3" type="box" pos="0.55 0 0.94" size="0.19 0.36 0.015" rgba="0.25 0.45 0.65 1"/>
+      <geom name="table_mattress1" type="box" pos="-0.3 0 0.94" size="0.24 0.36 0.015" rgba="0.18 0.35 0.50 1"/>
+      <geom name="table_mattress2" type="box" pos="0.1 0 0.94" size="0.24 0.36 0.015" rgba="0.18 0.35 0.50 1"/>
+      <geom name="table_mattress3" type="box" pos="0.55 0 0.94" size="0.19 0.36 0.015" rgba="0.18 0.35 0.50 1"/>
       <!-- Side rails -->
       <geom name="table_rail_left" type="box" pos="-0.45 -0.45 0.92" size="0.6 0.02 0.05" material="chrome_mat"/>
       <geom name="table_rail_right" type="box" pos="-0.45 0.45 0.92" size="0.6 0.02 0.05" material="chrome_mat"/>
@@ -117,52 +223,46 @@
       <geom name="table_accessory_rail2" type="cylinder" pos="-0.6 -0.3 0.88" size="0.015 0.12" material="chrome_mat"/>
     </body>
 
-    <!-- Surgical Light 1 (Telescopic) -->
-    <body name="surgical_light_1_base" pos="0.8 0 2.8">
-      <!-- Outer fixed sleeve -->
-      <geom name="light_outer_arm_1" type="cylinder" pos="0 0 -0.2" size="0.04 0.2" material="metal_mat"/>
-      <body name="surgical_light_1_moving" pos="0 0 -0.3">
-        <joint name="light_extender_1" type="slide" axis="0 0 1" range="-0.3 0.1" damping="20"/>
-        <!-- Inner sliding arm - increased length and overlap -->
-        <geom name="light_inner_arm_1" type="cylinder" pos="0 0 -0.1" size="0.025 0.3" material="chrome_mat"/>
-        <geom name="light_head_1" type="cylinder" pos="0 0 -0.4" size="0.25 0.05" material="light_mat"/>
-        <light mode="targetbody" target="operating_table" diffuse="1.2 1.2 1.0" specular="0.5 0.5 0.5" pos="0 0 -0.4" dir="0 0 -1" cutoff="45"/>
-      </body>
+    <!-- Surgical Light 1 -->
+    <body name="surgical_light_1" pos="0.5 0 2.8">
+      <!-- Light arm -->
+      <geom name="light_arm_1" type="cylinder" pos="0 0 -0.3" size="0.03 0.3" material="metal_mat"/>
+      <!-- Light head -->
+      <geom name="light_head_1" type="cylinder" pos="0 0 -0.65" size="0.25 0.05" rgba="0.88 0.90 0.92 1"/>
+      <light mode="targetbody" target="operating_table" diffuse="1.0 1.0 0.95" specular="0.4 0.4 0.4" pos="0 0 -0.65" dir="0 0 -1" cutoff="45"/>
     </body>
 
-    <!-- Surgical Light 2 (Telescopic) -->
-    <body name="surgical_light_2_base" pos="-0.8 0 2.8">
-      <!-- Outer fixed sleeve -->
-      <geom name="light_outer_arm_2" type="cylinder" pos="0 0 -0.2" size="0.04 0.2" material="metal_mat"/>
-      <body name="surgical_light_2_moving" pos="0 0 -0.3">
-        <joint name="light_extender_2" type="slide" axis="0 0 1" range="-0.3 0.1" damping="20"/>
-        <!-- Inner sliding arm - increased length and overlap -->
-        <geom name="light_inner_arm_2" type="cylinder" pos="0 0 -0.1" size="0.025 0.3" material="chrome_mat"/>
-        <geom name="light_head_2" type="cylinder" pos="0 0 -0.4" size="0.25 0.05" material="light_mat"/>
-        <light mode="targetbody" target="operating_table" diffuse="1.2 1.2 1.0" specular="0.5 0.5 0.5" pos="0 0 -0.4" dir="0 0 -1" cutoff="45"/>
-      </body>
+    <!-- Surgical Light 2 -->
+    <body name="surgical_light_2" pos="-0.5 0 2.8">
+      <!-- Light arm -->
+      <geom name="light_arm_2" type="cylinder" pos="0 0 -0.3" size="0.03 0.3" material="metal_mat"/>
+      <!-- Light head -->
+      <geom name="light_head_2" type="cylinder" pos="0 0 -0.65" size="0.25 0.05" rgba="0.88 0.90 0.92 1"/>
+      <light mode="targetbody" target="operating_table" diffuse="1.0 1.0 0.95" specular="0.4 0.4 0.4" pos="0 0 -0.65" dir="0 0 -1" cutoff="45"/>
     </body>
 
     <!-- Surgical Robotic Arm (7-axis) - SCALED UP -->
     <body name="robot_base" pos="1.2 0.6 0">
       <!-- Base platform -->
       <geom name="robot_base_plate" type="cylinder" pos="0 0 0.08" size="0.35 0.08" material="brushed_metal_mat"/>
-      <geom name="robot_base_cover" type="cylinder" pos="0 0 0.18" size="0.32 0.1" rgba="0.85 0.88 0.92 1"/>
+      <geom name="robot_base_cover" type="cylinder" pos="0 0 0.18" size="0.32 0.1" rgba="0.70 0.73 0.76 1"/>
       <!-- Emergency stop button -->
       <geom name="robot_estop" type="cylinder" pos="0.25 0 0.22" size="0.035 0.02" material="red_accent" euler="90 0 0"/>
       <!-- Power indicator -->
       <geom name="robot_power_led" type="cylinder" pos="-0.22 0.18 0.22" size="0.012 0.008" material="green_mat" euler="90 0 0"/>
 
       <!-- Joint 1 (Base rotation) -->
-      <body name="robot_joint1" pos="0 0 0.28" euler="0 0 -45">
+      <body name="robot_joint1" pos="0 0 0.28" euler="0 0 -35">
         <geom name="robot_j1_housing" type="cylinder" pos="0 0 0.12" size="0.18 0.12" material="chrome_mat"/>
         <geom name="robot_j1_ring" type="cylinder" pos="0 0 0.08" size="0.19 0.015" rgba="0.3 0.35 0.4 1"/>
         <joint name="robot_shoulder_rotate" type="hinge" axis="0 0 1" range="-180 180" damping="2.0"/>
 
         <!-- Joint 2 (Shoulder) -->
-        <body name="robot_joint2" pos="0 0 0.24" euler="0 -40 0">
+        <body name="robot_joint2" pos="0 0 0.24" euler="0 -25 0">
           <geom name="robot_j2_mount" type="box" pos="0 0 0" size="0.12 0.12 0.06" material="metal_mat"/>
           <geom name="robot_j2_housing" type="cylinder" pos="0 0.15 0.08" size="0.1 0.08" material="chrome_mat" euler="90 0 0"/>
+          <!-- Shoulder joint transition pieces for smoother bend -->
+          <geom name="robot_j2_transition" type="capsule" fromto="0 -0.08 0.05 0 0.08 0.05" size="0.055" rgba="0.75 0.78 0.82 1"/>
           <joint name="robot_shoulder_pitch" type="hinge" axis="0 1 0" range="-90 90" damping="1.5"/>
 
           <!-- Link 1 (Upper arm) -->
@@ -172,28 +272,39 @@
             <!-- Cable details -->
             <geom name="robot_cable1" type="cylinder" pos="0.08 0.022 0.26" size="0.006 0.25" rgba="0.1 0.1 0.12 1"/>
             <geom name="robot_cable2" type="cylinder" pos="0.08 -0.022 0.26" size="0.006 0.25" rgba="0.1 0.1 0.12 1"/>
+            <!-- Upper arm segment rings for visual continuity -->
+            <geom name="robot_upper_ring1" type="cylinder" pos="0 0 0.17" size="0.068 0.01" rgba="0.3 0.35 0.4 1"/>
+            <geom name="robot_upper_ring2" type="cylinder" pos="0 0 0.35" size="0.068 0.01" rgba="0.3 0.35 0.4 1"/>
 
             <!-- Joint 3 (Elbow) -->
-            <body name="robot_joint3" pos="0 0 0.52" euler="0 55 0">
+            <body name="robot_joint3" pos="0 0 0.52" euler="0 42 0">
               <geom name="robot_j3_housing" type="cylinder" pos="0 0.12 0" size="0.09 0.12" material="chrome_mat" euler="90 0 0"/>
-              <geom name="robot_j3_cover" type="box" pos="0 0 0" size="0.1 0.1 0.05" rgba="0.88 0.90 0.93 1"/>
+              <geom name="robot_j3_cover" type="box" pos="0 0 0" size="0.1 0.1 0.05" rgba="0.72 0.75 0.78 1"/>
+              <!-- Elbow joint transition pieces for smoother bend -->
+              <geom name="robot_j3_transition1" type="capsule" fromto="-0.055 0 -0.03 0.055 0 -0.03" size="0.045" rgba="0.75 0.78 0.82 1"/>
+              <geom name="robot_j3_transition2" type="box" pos="0 0 -0.05" size="0.08 0.08 0.025" material="brushed_metal_mat"/>
               <joint name="robot_elbow_pitch" type="hinge" axis="0 1 0" range="-135 135" damping="1.2"/>
 
               <!-- Link 2 (Forearm) -->
               <body name="robot_link2" pos="0 0 0.05">
                 <geom name="robot_forearm" type="capsule" fromto="0 0 0 0 0 0.45" size="0.055" material="brushed_metal_mat"/>
                 <geom name="robot_forearm_detail" type="box" pos="0.065 0 0.225" size="0.018 0.022 0.22" rgba="0.2 0.22 0.25 1"/>
+                <!-- Forearm segment rings for visual continuity -->
+                <geom name="robot_forearm_ring1" type="cylinder" pos="0 0 0.15" size="0.058 0.01" rgba="0.3 0.35 0.4 1"/>
+                <geom name="robot_forearm_ring2" type="cylinder" pos="0 0 0.30" size="0.058 0.01" rgba="0.3 0.35 0.4 1"/>
 
                 <!-- Joint 4 (Wrist rotation) -->
                 <body name="robot_joint4" pos="0 0 0.45">
                   <geom name="robot_j4_housing" type="cylinder" pos="0 0 0.06" size="0.075 0.06" material="chrome_mat"/>
                   <geom name="robot_j4_ring" type="cylinder" pos="0 0 0.03" size="0.078 0.012" rgba="0.3 0.35 0.4 1"/>
+                  <!-- Wrist connection transition -->
+                  <geom name="robot_j4_transition" type="cylinder" pos="0 0 0.01" size="0.06 0.015" rgba="0.75 0.78 0.82 1"/>
                   <joint name="robot_wrist_rotate" type="hinge" axis="0 0 1" range="-180 180" damping="0.8"/>
 
                   <!-- Joint 5 (Wrist pitch) -->
-                  <body name="robot_joint5" pos="0 0 0.12" euler="0 -30 0">
+                  <body name="robot_joint5" pos="0 0 0.12" euler="0 -22 0">
                     <geom name="robot_j5_housing" type="cylinder" pos="0 0.068 0" size="0.06 0.068" material="chrome_mat" euler="90 0 0"/>
-                    <geom name="robot_j5_bracket" type="box" pos="0 0 0" size="0.068 0.068 0.038" rgba="0.88 0.90 0.93 1"/>
+                    <geom name="robot_j5_bracket" type="box" pos="0 0 0" size="0.068 0.068 0.038" rgba="0.72 0.75 0.78 1"/>
                     <joint name="robot_wrist_pitch" type="hinge" axis="0 1 0" range="-90 90" damping="0.6"/>
 
                     <!-- Joint 6 (Wrist roll) -->
@@ -211,7 +322,7 @@
                         <!-- End effector / Surgical tool mount -->
                         <body name="robot_endeffector" pos="0 0 0.06">
                           <geom name="robot_tool_mount" type="cylinder" pos="0 0 0.038" size="0.038 0.038" material="chrome_mat"/>
-                          <geom name="robot_tool_adapter" type="box" pos="0 0 0.082" size="0.03 0.03 0.008" rgba="0.85 0.88 0.92 1"/>
+                          <geom name="robot_tool_adapter" type="box" pos="0 0 0.082" size="0.03 0.03 0.008" rgba="0.75 0.78 0.80 1"/>
                           <!-- Surgical instrument holder -->
                           <geom name="robot_instrument_clamp1" type="box" pos="0.022 0 0.105" size="0.012 0.027 0.022" material="metal_mat"/>
                           <geom name="robot_instrument_clamp2" type="box" pos="-0.022 0 0.105" size="0.012 0.027 0.022" material="metal_mat"/>
@@ -238,13 +349,15 @@
       <geom name="robot_status_frame" type="box" pos="0 -0.34 0.38" size="0.128 0.008 0.098" material="metal_mat" euler="15 0 0"/>
     </body>
 
-    <!-- Medical Equipment Cart 1 -->
+    <!-- Medical Equipment Cart 1 - Anesthesia Supply Cart -->
     <body name="equipment_cart_1" pos="2 1 0">
       <!-- Cart base with wheels -->
       <geom name="cart1_wheel1" type="cylinder" pos="0.15 0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="cart1_wheel2" type="cylinder" pos="-0.15 0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="cart1_wheel3" type="cylinder" pos="0.15 -0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="cart1_wheel4" type="cylinder" pos="-0.15 -0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
+      <!-- Cart frame -->
+      <geom name="cart1_frame" type="box" pos="0 0 0.5" size="0.26 0.21 0.5" rgba="0.65 0.68 0.70 1"/>
       <!-- Cart shelves -->
       <geom name="cart1_shelf1" type="box" pos="0 0 0.3" size="0.25 0.2 0.02" material="equipment_mat"/>
       <geom name="cart1_shelf2" type="box" pos="0 0 0.6" size="0.25 0.2 0.02" material="equipment_mat"/>
@@ -254,16 +367,56 @@
       <geom name="cart1_leg2" type="cylinder" pos="-0.2 0.15 0.45" size="0.015 0.4" material="metal_mat"/>
       <geom name="cart1_leg3" type="cylinder" pos="0.2 -0.15 0.45" size="0.015 0.4" material="metal_mat"/>
       <geom name="cart1_leg4" type="cylinder" pos="-0.2 -0.15 0.45" size="0.015 0.4" material="metal_mat"/>
+
+      <!-- Oxygen saturation monitor on top shelf -->
+      <geom name="cart1_monitor_base" type="box" pos="0 0.05 0.95" size="0.08 0.06 0.04" rgba="0.25 0.28 0.32 1"/>
+      <geom name="cart1_monitor_screen" type="box" pos="0 0.1 1.0" size="0.075 0.01 0.055" rgba="0.05 0.15 0.1 1"/>
+      <geom name="cart1_monitor_display" type="box" pos="0 0.11 1.0" size="0.06 0.005 0.04" rgba="0.1 0.4 0.3 1"/>
+
+      <!-- Airway management supplies on middle shelf -->
+      <geom name="cart1_laryngoscope" type="cylinder" pos="0.1 0 0.63" size="0.015 0.08" rgba="0.75 0.78 0.82 1" euler="0 90 0"/>
+      <geom name="cart1_tube_box" type="box" pos="-0.1 0.08 0.65" size="0.06 0.05 0.04" rgba="0.3 0.6 0.8 1"/>
+      <geom name="cart1_bag_valve" type="box" pos="-0.1 -0.08 0.65" size="0.05 0.06 0.03" rgba="0.4 0.7 0.4 1"/>
+
+      <!-- Medication vials on bottom shelf -->
+      <geom name="cart1_vial1" type="cylinder" pos="0.08 0.08 0.36" size="0.015 0.05" rgba="0.9 0.7 0.3 1"/>
+      <geom name="cart1_vial2" type="cylinder" pos="0.08 0 0.36" size="0.015 0.05" rgba="0.3 0.6 0.9 1"/>
+      <geom name="cart1_vial3" type="cylinder" pos="0.08 -0.08 0.36" size="0.015 0.05" rgba="0.9 0.3 0.3 1"/>
+      <geom name="cart1_syringe_tray" type="box" pos="-0.1 0 0.34" size="0.08 0.12 0.02" rgba="0.78 0.80 0.82 1"/>
     </body>
 
     <!-- Anesthesia Machine -->
     <body name="anesthesia_machine" pos="-2 -1 0">
-      <!-- Main unit -->
-      <geom name="anesthesia_base" type="box" pos="0 0 0.35" size="0.3 0.25 0.35" material="equipment_mat"/>
-      <geom name="anesthesia_screen" type="box" pos="0 0.15 0.9" size="0.25 0.02 0.2" rgba="0.1 0.1 0.2 1"/>
+      <!-- Main unit with control panel -->
+      <geom name="anesthesia_base" type="box" pos="0 0 0.35" size="0.3 0.25 0.35" rgba="0.68 0.72 0.75 1"/>
+      <geom name="anesthesia_top" type="box" pos="0 0 0.72" size="0.32 0.27 0.02" rgba="0.60 0.63 0.66 1"/>
+
+      <!-- Monitoring screen -->
+      <geom name="anesthesia_screen" type="box" pos="0 0.15 0.9" size="0.25 0.02 0.2" rgba="0.05 0.1 0.15 1"/>
+      <geom name="anesthesia_display" type="box" pos="0 0.16 0.9" size="0.22 0.01 0.17" rgba="0.1 0.3 0.4 1"/>
+
+      <!-- Control knobs and buttons -->
+      <geom name="anesthesia_knob1" type="cylinder" pos="0.1 0.24 0.78" size="0.025 0.015" rgba="0.3 0.35 0.4 1" euler="90 0 0"/>
+      <geom name="anesthesia_knob2" type="cylinder" pos="-0.1 0.24 0.78" size="0.025 0.015" rgba="0.3 0.35 0.4 1" euler="90 0 0"/>
+      <geom name="anesthesia_flowmeter1" type="box" pos="0.15 0.24 0.85" size="0.02 0.01 0.05" rgba="0.9 0.95 1.0 0.8"/>
+      <geom name="anesthesia_flowmeter2" type="box" pos="0.05 0.24 0.85" size="0.02 0.01 0.05" rgba="0.9 0.95 1.0 0.8"/>
+      <geom name="anesthesia_flowmeter3" type="box" pos="-0.05 0.24 0.85" size="0.02 0.01 0.05" rgba="0.9 0.95 1.0 0.8"/>
+
+      <!-- Vaporizer (anesthetic agent) -->
+      <geom name="anesthesia_vaporizer" type="box" pos="-0.15 0 0.55" size="0.08 0.12 0.15" rgba="0.5 0.3 0.6 1"/>
+      <geom name="anesthesia_vap_dial" type="cylinder" pos="-0.15 0.12 0.6" size="0.03 0.01" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
+      <geom name="anesthesia_vap_label" type="box" pos="-0.15 0.125 0.52" size="0.05 0.005 0.02" rgba="0.9 0.9 0.3 1"/>
+
       <!-- Gas cylinders -->
-      <geom name="gas_cylinder1" type="cylinder" pos="0.25 0 0.3" size="0.06 0.3" rgba="0.2 0.6 0.8 1"/>
-      <geom name="gas_cylinder2" type="cylinder" pos="-0.25 0 0.3" size="0.06 0.3" rgba="0.8 0.6 0.2 1"/>
+      <geom name="gas_cylinder1" type="cylinder" pos="0.25 0 0.3" size="0.06 0.3" rgba="0.2 0.5 0.7 1"/>
+      <geom name="gas_cylinder1_label" type="box" pos="0.25 0.06 0.4" size="0.04 0.005 0.08" rgba="0.95 0.95 0.95 1"/>
+      <geom name="gas_cylinder2" type="cylinder" pos="-0.25 0 0.3" size="0.06 0.3" rgba="0.7 0.5 0.2 1"/>
+      <geom name="gas_cylinder2_label" type="box" pos="-0.25 0.06 0.4" size="0.04 0.005 0.08" rgba="0.95 0.95 0.95 1"/>
+
+      <!-- Breathing circuit connectors -->
+      <geom name="anesthesia_connector1" type="cylinder" pos="0.08 0.24 0.65" size="0.015 0.03" material="chrome_mat" euler="90 0 0"/>
+      <geom name="anesthesia_connector2" type="cylinder" pos="-0.08 0.24 0.65" size="0.015 0.03" material="chrome_mat" euler="90 0 0"/>
+
       <!-- Wheels -->
       <geom name="anesthesia_wheel1" type="cylinder" pos="0.2 0.2 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="anesthesia_wheel2" type="cylinder" pos="-0.2 0.2 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
@@ -271,12 +424,29 @@
       <geom name="anesthesia_wheel4" type="cylinder" pos="-0.2 -0.2 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
     </body>
 
-    <!-- Monitor Stand -->
+    <!-- Monitor Stand - Patient Vital Signs Monitor -->
     <body name="monitor_stand" pos="1.5 -1.5 0">
       <geom name="monitor_pole" type="cylinder" pos="0 0 0.75" size="0.04 0.75" material="metal_mat"/>
       <geom name="monitor_base" type="cylinder" pos="0 0 0.05" size="0.2 0.05" material="metal_mat"/>
-      <geom name="stand_monitor_screen" type="box" pos="0 0.1 1.3" size="0.25 0.02 0.18" rgba="0.1 0.1 0.15 1"/>
-      <geom name="stand_monitor_frame" type="box" pos="0 0.08 1.3" size="0.27 0.01 0.2" material="metal_mat"/>
+
+      <!-- Main monitor screen -->
+      <geom name="monitor_screen" type="box" pos="0 0.1 1.3" size="0.25 0.02 0.18" rgba="0.05 0.1 0.08 1"/>
+      <geom name="monitor_frame" type="box" pos="0 0.08 1.3" size="0.27 0.01 0.2" material="metal_mat"/>
+
+      <!-- ECG waveform display -->
+      <geom name="monitor_ecg_display" type="box" pos="0 0.11 1.38" size="0.22 0.005 0.06" rgba="0.1 0.8 0.3 1"/>
+      <!-- SpO2 display -->
+      <geom name="monitor_spo2_display" type="box" pos="0 0.11 1.28" size="0.1 0.005 0.04" rgba="0.2 0.4 0.9 1"/>
+      <!-- Blood pressure display -->
+      <geom name="monitor_bp_display" type="box" pos="0 0.11 1.2" size="0.1 0.005 0.04" rgba="0.9 0.3 0.3 1"/>
+
+      <!-- Control buttons -->
+      <geom name="monitor_button1" type="cylinder" pos="0.15 0.09 1.15" size="0.012 0.008" material="blue_accent" euler="90 0 0"/>
+      <geom name="monitor_button2" type="cylinder" pos="0.05 0.09 1.15" size="0.012 0.008" material="green_mat" euler="90 0 0"/>
+      <geom name="monitor_button3" type="cylinder" pos="-0.05 0.09 1.15" size="0.012 0.008" material="yellow_warning" euler="90 0 0"/>
+
+      <!-- Cable management hook -->
+      <geom name="monitor_cable_hook" type="box" pos="0 -0.08 1.1" size="0.03 0.02 0.08" material="metal_mat"/>
     </body>
 
     <!-- Instrument Table -->
@@ -291,18 +461,18 @@
       <geom name="instrument2" type="cylinder" pos="0 0.1 0.83" size="0.01 0.08" rgba="0.8 0.8 0.85 1" euler="0 90 45"/>
     </body>
 
-    <!-- Storage Cabinet (Floor) -->
-    <body name="floor_storage_cabinet" pos="-4 3 0">
-      <geom name="floor_cabinet_base" type="box" pos="0 0 0.4" size="0.5 0.4 0.4" rgba="0.85 0.88 0.9 1"/>
-      <geom name="floor_cabinet_top" type="box" pos="0 0 1.2" size="0.5 0.4 0.4" rgba="0.85 0.88 0.9 1"/>
-      <geom name="floor_cabinet_doors" type="box" pos="0 0.38 0.8" size="0.45 0.02 0.35" rgba="0.75 0.78 0.8 1"/>
+    <!-- Storage Cabinet -->
+    <body name="storage_cabinet" pos="-4 3 0">
+      <geom name="cabinet_base" type="box" pos="0 0 0.4" size="0.5 0.4 0.4" rgba="0.76 0.78 0.80 1"/>
+      <geom name="cabinet_top" type="box" pos="0 0 1.2" size="0.5 0.4 0.4" rgba="0.76 0.78 0.80 1"/>
+      <geom name="cabinet_doors" type="box" pos="0 0.38 0.8" size="0.45 0.02 0.35" rgba="0.75 0.78 0.8 1"/>
     </body>
 
     <!-- Scrub Sink Area -->
     <body name="scrub_sink" pos="3.5 -4 0">
       <geom name="sink_counter" type="box" pos="0 0 0.85" size="0.6 0.4 0.05" material="metal_mat"/>
       <geom name="sink_basin" type="box" pos="0 0 0.75" size="0.4 0.3 0.05" rgba="0.9 0.9 0.95 1"/>
-      <geom name="sink_support" type="box" pos="0 0 0.4" size="0.55 0.35 0.4" rgba="0.85 0.88 0.9 1"/>
+      <geom name="sink_support" type="box" pos="0 0 0.4" size="0.55 0.35 0.4" rgba="0.76 0.78 0.80 1"/>
     </body>
 
     <!-- Waste Bin -->
@@ -341,20 +511,51 @@
       <geom name="cart2_handle3" type="cylinder" pos="0 0.21 0.7" size="0.008 0.04" material="chrome_mat" euler="0 90 0"/>
       <geom name="cart2_top" type="box" pos="0 0 0.97" size="0.27 0.22 0.02" material="chrome_mat"/>
       <!-- Medical supplies on top -->
-      <geom name="cart2_tray" type="box" pos="0 0 1.01" size="0.15 0.12 0.015" rgba="0.9 0.92 0.95 1"/>
+      <geom name="cart2_tray" type="box" pos="0 0 1.01" size="0.15 0.12 0.015" rgba="0.78 0.80 0.82 1"/>
       <geom name="cart2_bottle1" type="cylinder" pos="0.1 0.08 1.06" size="0.02 0.05" rgba="0.95 0.7 0.3 1"/>
       <geom name="cart2_bottle2" type="cylinder" pos="-0.08 0.05 1.06" size="0.02 0.05" rgba="0.3 0.6 0.9 1"/>
     </body>
 
     <!-- Ultrasound Machine -->
     <body name="ultrasound_machine" pos="2.5 -1.2 0">
-      <geom name="us_base" type="box" pos="0 0 0.3" size="0.35 0.3 0.3" rgba="0.88 0.90 0.93 1"/>
+      <!-- Main console -->
+      <geom name="us_base" type="box" pos="0 0 0.3" size="0.35 0.3 0.3" rgba="0.72 0.75 0.78 1"/>
+
+      <!-- Monitor screen -->
       <geom name="us_screen" type="box" pos="0 0.25 0.75" size="0.25 0.03 0.2" rgba="0.05 0.08 0.12 1"/>
       <geom name="us_screen_frame" type="box" pos="0 0.23 0.75" size="0.27 0.02 0.22" material="metal_mat"/>
+      <!-- Ultrasound image display -->
+      <geom name="us_image" type="box" pos="0 0.26 0.75" size="0.22 0.01 0.17" rgba="0.15 0.15 0.2 1"/>
+
+      <!-- Articulating arm for screen -->
       <geom name="us_arm" type="box" pos="0 0.15 0.55" size="0.04 0.08 0.1" material="metal_mat"/>
+
+      <!-- Control panel with multiple zones -->
       <geom name="us_keyboard" type="box" pos="0 0.28 0.42" size="0.2 0.02 0.1" rgba="0.15 0.18 0.22 1" euler="20 0 0"/>
+      <!-- Trackball -->
+      <geom name="us_trackball" type="sphere" pos="0.12 0.29 0.45" size="0.025" rgba="0.3 0.3 0.3 1"/>
+      <!-- Function buttons -->
+      <geom name="us_btn1" type="box" pos="-0.08 0.29 0.46" size="0.015 0.015 0.003" rgba="0.2 0.4 0.7 1"/>
+      <geom name="us_btn2" type="box" pos="-0.06 0.29 0.46" size="0.015 0.015 0.003" rgba="0.2 0.6 0.3 1"/>
+      <geom name="us_btn3" type="box" pos="-0.04 0.29 0.46" size="0.015 0.015 0.003" rgba="0.7 0.3 0.2 1"/>
+
+      <!-- TGC (Time Gain Compensation) sliders -->
+      <geom name="us_tgc_panel" type="box" pos="0.3 0.28 0.45" size="0.03 0.02 0.12" rgba="0.25 0.28 0.32 1" euler="20 0 0"/>
+      <geom name="us_tgc_slider1" type="box" pos="0.3 0.29 0.52" size="0.01 0.005 0.015" rgba="0.6 0.6 0.6 1"/>
+      <geom name="us_tgc_slider2" type="box" pos="0.3 0.29 0.48" size="0.01 0.005 0.015" rgba="0.6 0.6 0.6 1"/>
+      <geom name="us_tgc_slider3" type="box" pos="0.3 0.29 0.44" size="0.01 0.005 0.015" rgba="0.6 0.6 0.6 1"/>
+
+      <!-- Probe holder with probe -->
       <geom name="us_probe_holder" type="box" pos="-0.3 0 0.5" size="0.04 0.08 0.15" material="metal_mat"/>
-      <geom name="us_probe" type="capsule" fromto="-0.3 0 0.65 -0.3 0 0.75" size="0.02" rgba="0.7 0.75 0.8 1"/>
+      <geom name="us_probe" type="capsule" fromto="-0.3 0 0.65 -0.3 0 0.75" size="0.02" rgba="0.6 0.65 0.7 1"/>
+      <geom name="us_probe_head" type="box" pos="-0.3 0 0.76" size="0.025 0.015 0.015" rgba="0.5 0.55 0.6 1"/>
+      <geom name="us_cable" type="cylinder" pos="-0.3 0.02 0.58" size="0.008 0.1" rgba="0.2 0.2 0.2 1"/>
+
+      <!-- Gel bottle holder -->
+      <geom name="us_gel_holder" type="box" pos="-0.3 -0.15 0.35" size="0.035 0.035 0.05" rgba="0.55 0.58 0.62 1"/>
+      <geom name="us_gel_bottle" type="cylinder" pos="-0.3 -0.15 0.42" size="0.025 0.06" rgba="0.3 0.5 0.8 0.7"/>
+
+      <!-- Wheels -->
       <geom name="us_wheel1" type="cylinder" pos="0.25 0.2 0.06" size="0.06 0.03" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="us_wheel2" type="cylinder" pos="-0.25 0.2 0.06" size="0.06 0.03" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="us_wheel3" type="cylinder" pos="0.25 -0.2 0.06" size="0.06 0.03" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
@@ -363,15 +564,42 @@
 
     <!-- Defibrillator Cart -->
     <body name="defibrillator" pos="-3.2 -1.5 0">
-      <geom name="defib_cart_base" type="box" pos="0 0 0.25" size="0.25 0.2 0.25" rgba="0.88 0.90 0.93 1"/>
-      <geom name="defib_screen" type="box" pos="0 0.15 0.65" size="0.18 0.02 0.12" rgba="0.1 0.3 0.2 1"/>
+      <!-- Cart base -->
+      <geom name="defib_cart_base" type="box" pos="0 0 0.25" size="0.25 0.2 0.25" rgba="0.72 0.75 0.78 1"/>
+
+      <!-- Monitor/Display -->
+      <geom name="defib_screen" type="box" pos="0 0.15 0.65" size="0.18 0.02 0.12" rgba="0.05 0.15 0.1 1"/>
       <geom name="defib_screen_frame" type="box" pos="0 0.13 0.65" size="0.19 0.01 0.13" material="metal_mat"/>
+      <!-- ECG display on screen -->
+      <geom name="defib_ecg_line" type="box" pos="0 0.16 0.68" size="0.15 0.005 0.025" rgba="0.2 0.9 0.3 1"/>
+      <!-- Energy level indicator -->
+      <geom name="defib_energy_display" type="box" pos="0 0.16 0.62" size="0.06 0.005 0.03" rgba="0.9 0.4 0.1 1"/>
+
+      <!-- Mounting bracket -->
       <geom name="defib_mount" type="box" pos="0 0.08 0.52" size="0.05 0.05 0.02" material="metal_mat"/>
+
+      <!-- Top shelf for paddles -->
       <geom name="defib_shelf" type="box" pos="0 0 0.52" size="0.23 0.18 0.02" material="chrome_mat"/>
+
+      <!-- Defibrillator paddles with handles -->
       <geom name="defib_paddle1" type="capsule" fromto="0.08 0 0.55 0.08 0 0.58" size="0.025" material="red_accent"/>
-      <geom name="defib_paddle2" type="capsule" fromto="-0.08 0 0.55 -0.08 0 0.58" size="0.025" material="blue_accent"/>
       <geom name="defib_paddle1_disc" type="cylinder" pos="0.08 0 0.585" size="0.035 0.008" material="red_accent"/>
+      <geom name="defib_paddle1_button" type="cylinder" pos="0.08 0.025 0.57" size="0.008 0.005" rgba="0.9 0.9 0.9 1" euler="90 0 0"/>
+
+      <geom name="defib_paddle2" type="capsule" fromto="-0.08 0 0.55 -0.08 0 0.58" size="0.025" material="blue_accent"/>
       <geom name="defib_paddle2_disc" type="cylinder" pos="-0.08 0 0.585" size="0.035 0.008" material="blue_accent"/>
+      <geom name="defib_paddle2_button" type="cylinder" pos="-0.08 0.025 0.57" size="0.008 0.005" rgba="0.9 0.9 0.9 1" euler="90 0 0"/>
+
+      <!-- Charge button -->
+      <geom name="defib_charge_btn" type="cylinder" pos="0 0.16 0.55" size="0.02 0.01" rgba="0.9 0.6 0.1 1" euler="90 0 0"/>
+      <!-- Shock button -->
+      <geom name="defib_shock_btn" type="cylinder" pos="0 0.16 0.5" size="0.025 0.012" material="red_accent" euler="90 0 0"/>
+
+      <!-- Cable storage hooks -->
+      <geom name="defib_cable_hook1" type="box" pos="0.2 0 0.4" size="0.015 0.025 0.03" material="metal_mat"/>
+      <geom name="defib_cable_hook2" type="box" pos="-0.2 0 0.4" size="0.015 0.025 0.03" material="metal_mat"/>
+
+      <!-- Wheels -->
       <geom name="defib_wheel1" type="cylinder" pos="0.18 0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="defib_wheel2" type="cylinder" pos="-0.18 0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
       <geom name="defib_wheel3" type="cylinder" pos="0.18 -0.15 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
@@ -382,7 +610,7 @@
     <body name="xray_viewer" pos="-5.5 -3 0">
       <geom name="xray_stand" type="cylinder" pos="0 0 0.75" size="0.04 0.75" material="metal_mat"/>
       <geom name="xray_base" type="cylinder" pos="0 0 0.05" size="0.2 0.05" material="metal_mat"/>
-      <geom name="xray_lightbox" type="box" pos="0 0.05 1.4" size="0.3 0.02 0.35" material="xray_mat"/>
+      <geom name="xray_lightbox" type="box" pos="0 0.05 1.4" size="0.3 0.02 0.35" rgba="0.95 0.97 1.0 1"/>
       <geom name="xray_frame" type="box" pos="0 0.03 1.4" size="0.32 0.01 0.37" material="metal_mat"/>
       <geom name="xray_film" type="box" pos="0 0.06 1.4" size="0.22 0.005 0.28" rgba="0.3 0.35 0.4 0.6"/>
     </body>
@@ -400,11 +628,16 @@
 
     <!-- Wall Clock -->
     <body name="wall_clock" pos="0 -5.8 2.3">
-      <geom name="clock_face" type="cylinder" pos="0 0 0" size="0.15 0.03" rgba="0.95 0.97 0.98 1" euler="90 0 0"/>
-      <geom name="clock_rim" type="cylinder" pos="0 -0.005 0" size="0.16 0.01" material="chrome_mat" euler="90 0 0"/>
-      <geom name="clock_center" type="cylinder" pos="0 0.02 0" size="0.008 0.005" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
-      <geom name="clock_hour_hand" type="box" pos="0 0.025 0.05" size="0.004 0.005 0.05" rgba="0.1 0.1 0.1 1"/>
-      <geom name="clock_minute_hand" type="box" pos="0 0.025 0.08" size="0.003 0.005 0.08" rgba="0.1 0.1 0.1 1"/>
+      <geom name="clock_face" type="cylinder" pos="0 0 0" size="0.30 0.03" rgba="0.95 0.97 0.98 1" euler="90 0 0"/>
+      <geom name="clock_rim" type="cylinder" pos="0 -0.005 0" size="0.32 0.01" material="chrome_mat" euler="90 0 0"/>
+      <geom name="clock_center" type="cylinder" pos="0 0.02 0" size="0.016 0.005" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
+      <geom name="clock_hour_hand" type="box" pos="0 0.025 0.10" size="0.008 0.005 0.10" rgba="0.1 0.1 0.1 1"/>
+      <geom name="clock_minute_hand" type="box" pos="0 0.025 0.16" size="0.006 0.005 0.16" rgba="0.1 0.1 0.1 1"/>
+      <!-- Clock number markers -->
+      <geom name="clock_mark_12" type="box" pos="0 0.025 0.26" size="0.015 0.003 0.03" rgba="0.2 0.2 0.2 1"/>
+      <geom name="clock_mark_3" type="box" pos="0.26 0.025 0" size="0.03 0.003 0.015" rgba="0.2 0.2 0.2 1"/>
+      <geom name="clock_mark_6" type="box" pos="0 0.025 -0.26" size="0.015 0.003 0.03" rgba="0.2 0.2 0.2 1"/>
+      <geom name="clock_mark_9" type="box" pos="-0.26 0.025 0" size="0.03 0.003 0.015" rgba="0.2 0.2 0.2 1"/>
     </body>
 
     <!-- Oxygen Tank Stand -->
@@ -426,7 +659,7 @@
       <geom name="microscope_joint1" type="cylinder" pos="0 0 1.6" size="0.05 0.04" material="chrome_mat" euler="90 0 0"/>
       <geom name="microscope_arm2" type="capsule" fromto="0.3 0 1.5 0.5 0 1.3" size="0.03" material="brushed_metal_mat"/>
       <geom name="microscope_joint2" type="cylinder" pos="0.3 0 1.5" size="0.05 0.04" material="chrome_mat" euler="90 0 0"/>
-      <geom name="microscope_head" type="box" pos="0.5 0 1.25" size="0.12 0.1 0.08" rgba="0.88 0.90 0.93 1"/>
+      <geom name="microscope_head" type="box" pos="0.5 0 1.25" size="0.12 0.1 0.08" rgba="0.72 0.75 0.78 1"/>
       <geom name="microscope_objective" type="cylinder" pos="0.5 0 1.15" size="0.04 0.08" material="chrome_mat"/>
       <geom name="microscope_eyepiece1" type="cylinder" pos="0.45 0.05 1.32" size="0.025 0.06" rgba="0.2 0.2 0.2 1" euler="30 0 0"/>
       <geom name="microscope_eyepiece2" type="cylinder" pos="0.55 0.05 1.32" size="0.025 0.06" rgba="0.2 0.2 0.2 1" euler="30 0 0"/>
@@ -445,8 +678,8 @@
       <!-- Legs -->
       <geom name="doc1_leg_left" type="capsule" fromto="-0.08 0 0.05 -0.08 0 0.85" size="0.06" rgba="0.15 0.35 0.55 1"/>
       <geom name="doc1_leg_right" type="capsule" fromto="0.08 0 0.05 0.08 0 0.85" size="0.06" rgba="0.15 0.35 0.55 1"/>
-      <geom name="doc1_shoe_left" type="box" pos="-0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.9 0.92 0.95 1"/>
-      <geom name="doc1_shoe_right" type="box" pos="0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.9 0.92 0.95 1"/>
+      <geom name="doc1_shoe_left" type="box" pos="-0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.78 0.80 0.82 1"/>
+      <geom name="doc1_shoe_right" type="box" pos="0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.78 0.80 0.82 1"/>
 
       <!-- Torso and scrubs -->
       <geom name="doc1_pelvis" type="box" pos="0 0 0.95" size="0.12 0.08 0.1" rgba="0.15 0.35 0.55 1"/>
@@ -486,8 +719,8 @@
       <!-- Legs -->
       <geom name="doc2_leg_left" type="capsule" fromto="-0.08 0 0.05 -0.08 0 0.85" size="0.06" rgba="0.15 0.35 0.55 1"/>
       <geom name="doc2_leg_right" type="capsule" fromto="0.08 0 0.05 0.08 0 0.85" size="0.06" rgba="0.15 0.35 0.55 1"/>
-      <geom name="doc2_shoe_left" type="box" pos="-0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.9 0.92 0.95 1"/>
-      <geom name="doc2_shoe_right" type="box" pos="0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.9 0.92 0.95 1"/>
+      <geom name="doc2_shoe_left" type="box" pos="-0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.78 0.80 0.82 1"/>
+      <geom name="doc2_shoe_right" type="box" pos="0.08 0.05 0.03" size="0.06 0.08 0.03" rgba="0.78 0.80 0.82 1"/>
 
       <!-- Torso and scrubs -->
       <geom name="doc2_pelvis" type="box" pos="0 0 0.95" size="0.11 0.08 0.1" rgba="0.15 0.35 0.55 1"/>
@@ -525,12 +758,12 @@
       <geom name="doc2_gown_tie" type="cylinder" pos="0 -0.085 1.22" size="0.004 0.14" rgba="0.18 0.55 0.48 1" euler="0 90 0"/>
 
       <!-- Name badge -->
-      <geom name="doc2_badge" type="box" pos="0.12 0.09 1.35" size="0.04 0.005 0.03" rgba="0.9 0.92 0.95 1"/>
+      <geom name="doc2_badge" type="box" pos="0.12 0.09 1.35" size="0.04 0.005 0.03" rgba="0.78 0.80 0.82 1"/>
     </body>
 
     <!-- Wall-mounted Equipment Panel 1 -->
     <body name="wall_panel_1" pos="-5.6 -2 0">
-      <geom name="panel1_back" type="box" pos="0 0 1.4" size="0.05 0.4 0.5" rgba="0.88 0.90 0.93 1"/>
+      <geom name="panel1_back" type="box" pos="0 0 1.4" size="0.05 0.4 0.5" rgba="0.72 0.75 0.78 1"/>
       <geom name="panel1_screen" type="box" pos="0.04 0 1.6" size="0.01 0.25 0.15" rgba="0.1 0.15 0.2 1"/>
       <geom name="panel1_gauge1" type="cylinder" pos="0.04 0.15 1.3" size="0.06 0.01" rgba="0.95 0.97 0.98 1" euler="90 0 0"/>
       <geom name="panel1_gauge2" type="cylinder" pos="0.04 0 1.3" size="0.06 0.01" rgba="0.95 0.97 0.98 1" euler="90 0 0"/>
@@ -548,8 +781,8 @@
       <geom name="shelf_level3" type="box" pos="0 0 1.05" size="0.38 0.28 0.02" material="chrome_mat"/>
       <geom name="shelf_level4" type="box" pos="0 0 1.4" size="0.38 0.28 0.02" material="chrome_mat"/>
       <!-- Supplies on shelves -->
-      <geom name="shelf_box1" type="box" pos="0.15 0.1 0.42" size="0.08 0.06 0.05" rgba="0.9 0.92 0.95 1"/>
-      <geom name="shelf_box2" type="box" pos="-0.15 0.1 0.42" size="0.08 0.06 0.05" rgba="0.9 0.92 0.95 1"/>
+      <geom name="shelf_box1" type="box" pos="0.15 0.1 0.42" size="0.08 0.06 0.05" rgba="0.78 0.80 0.82 1"/>
+      <geom name="shelf_box2" type="box" pos="-0.15 0.1 0.42" size="0.08 0.06 0.05" rgba="0.78 0.80 0.82 1"/>
       <geom name="shelf_box3" type="box" pos="0 -0.1 0.77" size="0.1 0.08 0.05" rgba="0.85 0.9 0.92 1"/>
       <geom name="shelf_bottle1" type="cylinder" pos="0.15 0 1.12" size="0.03 0.06" rgba="0.9 0.6 0.3 1"/>
       <geom name="shelf_bottle2" type="cylinder" pos="0 0 1.12" size="0.03 0.06" rgba="0.3 0.7 0.9 1"/>
@@ -575,7 +808,7 @@
 
     <!-- Linen Cart -->
     <body name="linen_cart" pos="4.8 4 0">
-      <geom name="linen_frame" type="box" pos="0 0 0.5" size="0.3 0.25 0.5" rgba="0.88 0.90 0.93 1"/>
+      <geom name="linen_frame" type="box" pos="0 0 0.5" size="0.3 0.25 0.5" rgba="0.72 0.75 0.78 1"/>
       <geom name="linen_bag1" type="box" pos="0 0 0.6" size="0.28 0.23 0.35" rgba="0.9 0.95 1.0 0.8"/>
       <geom name="linen_label" type="box" pos="0 0.24 0.6" size="0.12 0.01 0.08" material="blue_accent"/>
       <geom name="linen_wheel1" type="cylinder" pos="0.22 0.18 0.05" size="0.04 0.02" rgba="0.2 0.2 0.2 1" euler="90 0 0"/>
@@ -588,7 +821,7 @@
     <body name="sanitizer_station_1" pos="5.5 0.5 0">
       <geom name="sanitizer1_pole" type="cylinder" pos="0 0 0.65" size="0.03 0.65" material="chrome_mat"/>
       <geom name="sanitizer1_base" type="cylinder" pos="0 0 0.05" size="0.18 0.05" material="brushed_metal_mat"/>
-      <geom name="sanitizer1_dispenser" type="box" pos="0 0 1.2" size="0.08 0.12 0.15" rgba="0.9 0.92 0.95 1"/>
+      <geom name="sanitizer1_dispenser" type="box" pos="0 0 1.2" size="0.08 0.12 0.15" rgba="0.78 0.80 0.82 1"/>
       <geom name="sanitizer1_bottle" type="cylinder" pos="0 0 1.1" size="0.045 0.12" rgba="0.3 0.7 0.9 0.7"/>
       <geom name="sanitizer1_pump" type="box" pos="0 0 1.32" size="0.035 0.05 0.03" rgba="0.7 0.75 0.8 1"/>
       <geom name="sanitizer1_sign" type="box" pos="0 0.11 1.4" size="0.12 0.01 0.08" material="blue_accent"/>
@@ -598,7 +831,7 @@
     <body name="sanitizer_station_2" pos="-5.5 0.5 0">
       <geom name="sanitizer2_pole" type="cylinder" pos="0 0 0.65" size="0.03 0.65" material="chrome_mat"/>
       <geom name="sanitizer2_base" type="cylinder" pos="0 0 0.05" size="0.18 0.05" material="brushed_metal_mat"/>
-      <geom name="sanitizer2_dispenser" type="box" pos="0 0 1.2" size="0.08 0.12 0.15" rgba="0.9 0.92 0.95 1"/>
+      <geom name="sanitizer2_dispenser" type="box" pos="0 0 1.2" size="0.08 0.12 0.15" rgba="0.78 0.80 0.82 1"/>
       <geom name="sanitizer2_bottle" type="cylinder" pos="0 0 1.1" size="0.045 0.12" rgba="0.3 0.7 0.9 0.7"/>
       <geom name="sanitizer2_pump" type="box" pos="0 0 1.32" size="0.035 0.05 0.03" rgba="0.7 0.75 0.8 1"/>
       <geom name="sanitizer2_sign" type="box" pos="0 0.11 1.4" size="0.12 0.01 0.08" material="blue_accent"/>
@@ -614,19 +847,50 @@
 
     <!-- Medical Waste Container 3 -->
     <body name="waste_bin_3" pos="4.5 -4.5 0">
-      <geom name="waste3_body" type="cylinder" pos="0 0 0.28" size="0.2 0.28" rgba="0.85 0.88 0.9 1"/>
+      <geom name="waste3_body" type="cylinder" pos="0 0 0.28" size="0.2 0.28" rgba="0.76 0.78 0.80 1"/>
       <geom name="waste3_lid" type="cylinder" pos="0 0 0.58" size="0.22 0.02" rgba="0.75 0.78 0.8 1"/>
       <geom name="waste3_label" type="box" pos="0 0.2 0.3" size="0.1 0.005 0.06" material="blue_accent"/>
     </body>
 
     <!-- Blood Bank Cooler -->
     <body name="blood_cooler" pos="-4.8 -2.5 0">
-      <geom name="cooler_body" type="box" pos="0 0 0.5" size="0.28 0.25 0.5" rgba="0.9 0.92 0.95 1"/>
-      <geom name="cooler_door" type="box" pos="0 0.24 0.5" size="0.26 0.02 0.48" rgba="0.95 0.97 0.98 1"/>
+      <!-- Main refrigeration unit -->
+      <geom name="cooler_body" type="box" pos="0 0 0.5" size="0.28 0.25 0.5" rgba="0.78 0.80 0.82 1"/>
+
+      <!-- Refrigerator door with window -->
+      <geom name="cooler_door" type="box" pos="0 0.24 0.5" size="0.26 0.02 0.48" rgba="0.82 0.85 0.87 1"/>
+      <geom name="cooler_window" type="box" pos="0 0.25 0.65" size="0.15 0.01 0.25" rgba="0.6 0.7 0.8 0.4"/>
+
+      <!-- Door handle -->
       <geom name="cooler_handle" type="cylinder" pos="0 0.26 0.65" size="0.015 0.08" material="chrome_mat" euler="0 90 0"/>
-      <geom name="cooler_screen" type="box" pos="0 0.26 0.35" size="0.08 0.01 0.06" rgba="0.1 0.3 0.2 1"/>
-      <geom name="cooler_redcross" type="box" pos="0 0.26 0.75" size="0.06 0.01 0.06" material="red_accent"/>
-      <geom name="cooler_warning" type="box" pos="0 0.26 0.2" size="0.1 0.005 0.04" material="yellow_warning"/>
+
+      <!-- Temperature display -->
+      <geom name="cooler_screen" type="box" pos="0 0.26 0.35" size="0.08 0.01 0.06" rgba="0.05 0.2 0.15 1"/>
+      <geom name="cooler_temp_digits" type="box" pos="0 0.265 0.35" size="0.06 0.005 0.04" rgba="0.2 0.9 0.4 1"/>
+
+      <!-- Temperature control panel -->
+      <geom name="cooler_control_panel" type="box" pos="0 0.26 0.22" size="0.1 0.01 0.08" rgba="0.25 0.28 0.32 1"/>
+      <geom name="cooler_btn_up" type="cylinder" pos="0.03 0.265 0.24" size="0.01 0.005" material="blue_accent" euler="90 0 0"/>
+      <geom name="cooler_btn_down" type="cylinder" pos="-0.03 0.265 0.24" size="0.01 0.005" material="blue_accent" euler="90 0 0"/>
+
+      <!-- Red cross symbol -->
+      <geom name="cooler_redcross_v" type="box" pos="0 0.26 0.88" size="0.02 0.005 0.08" material="red_accent"/>
+      <geom name="cooler_redcross_h" type="box" pos="0 0.26 0.88" size="0.06 0.005 0.02" material="red_accent"/>
+
+      <!-- Blood bag compartments visible through window -->
+      <geom name="cooler_bag1" type="box" pos="0 0.22 0.7" size="0.05 0.02 0.07" rgba="0.7 0.1 0.1 0.6"/>
+      <geom name="cooler_bag2" type="box" pos="0 0.22 0.6" size="0.05 0.02 0.07" rgba="0.7 0.1 0.1 0.6"/>
+
+      <!-- Warning label -->
+      <geom name="cooler_warning" type="box" pos="0 0.26 0.12" size="0.12 0.005 0.05" material="yellow_warning"/>
+      <geom name="cooler_warning_text" type="box" pos="0 0.265 0.12" size="0.1 0.003 0.03" rgba="0.1 0.1 0.1 1"/>
+
+      <!-- Alarm indicator light -->
+      <geom name="cooler_alarm_light" type="cylinder" pos="0.12 0.26 0.92" size="0.012 0.008" material="green_mat" euler="90 0 0"/>
+
+      <!-- Shelf dividers -->
+      <geom name="cooler_shelf1" type="box" pos="0 0.1 0.5" size="0.25 0.12 0.01" rgba="0.7 0.73 0.76 0.3"/>
+      <geom name="cooler_shelf2" type="box" pos="0 0.1 0.75" size="0.25 0.12 0.01" rgba="0.7 0.73 0.76 0.3"/>
     </body>
 
     <!-- Oxygen Tank Rack -->
@@ -649,22 +913,22 @@
       <geom name="prep_leg3" type="cylinder" pos="0.4 -0.28 0.425" size="0.025 0.425" material="metal_mat"/>
       <geom name="prep_leg4" type="cylinder" pos="-0.4 -0.28 0.425" size="0.025 0.425" material="metal_mat"/>
       <!-- Items on prep table -->
-      <geom name="prep_tray1" type="box" pos="0.2 0 0.89" size="0.18 0.12 0.02" rgba="0.9 0.92 0.95 1"/>
-      <geom name="prep_tray2" type="box" pos="-0.2 0.15 0.89" size="0.15 0.1 0.02" rgba="0.9 0.92 0.95 1"/>
-      <geom name="prep_container" type="cylinder" pos="-0.2 -0.15 0.92" size="0.05 0.05" rgba="0.85 0.88 0.9 1"/>
+      <geom name="prep_tray1" type="box" pos="0.2 0 0.89" size="0.18 0.12 0.02" rgba="0.78 0.80 0.82 1"/>
+      <geom name="prep_tray2" type="box" pos="-0.2 0.15 0.89" size="0.15 0.1 0.02" rgba="0.78 0.80 0.82 1"/>
+      <geom name="prep_container" type="cylinder" pos="-0.2 -0.15 0.92" size="0.05 0.05" rgba="0.76 0.78 0.80 1"/>
     </body>
 
     <!-- Foot Pedal Waste Bin -->
     <body name="pedal_bin" pos="3.2 -4.2 0">
-      <geom name="pedal_bin_body" type="box" pos="0 0 0.35" size="0.18 0.15 0.35" rgba="0.88 0.90 0.93 1"/>
+      <geom name="pedal_bin_body" type="box" pos="0 0 0.35" size="0.18 0.15 0.35" rgba="0.72 0.75 0.78 1"/>
       <geom name="pedal_bin_lid" type="box" pos="0 0 0.72" size="0.19 0.16 0.02" rgba="0.75 0.78 0.8 1"/>
       <geom name="pedal_bin_pedal" type="box" pos="0 0.18 0.03" size="0.12 0.06 0.01" rgba="0.7 0.73 0.76 1"/>
     </body>
 
     <!-- Step Stool -->
     <body name="step_stool" pos="-2.8 -4.5 0">
-      <geom name="stool_step1" type="box" pos="0 0 0.08" size="0.2 0.15 0.08" rgba="0.85 0.88 0.9 1"/>
-      <geom name="stool_step2" type="box" pos="0 0 0.22" size="0.15 0.12 0.06" rgba="0.85 0.88 0.9 1"/>
+      <geom name="stool_step1" type="box" pos="0 0 0.08" size="0.2 0.15 0.08" rgba="0.76 0.78 0.80 1"/>
+      <geom name="stool_step2" type="box" pos="0 0 0.22" size="0.15 0.12 0.06" rgba="0.76 0.78 0.80 1"/>
       <geom name="stool_rubber1" type="box" pos="0.18 0.13 0.02" size="0.025 0.025 0.02" rgba="0.2 0.2 0.2 1"/>
       <geom name="stool_rubber2" type="box" pos="-0.18 0.13 0.02" size="0.025 0.025 0.02" rgba="0.2 0.2 0.2 1"/>
       <geom name="stool_rubber3" type="box" pos="0.18 -0.13 0.02" size="0.025 0.025 0.02" rgba="0.2 0.2 0.2 1"/>
@@ -681,7 +945,7 @@
 
       <!-- Heavy base plate -->
       <geom name="tele_base_plate" type="box" pos="0 0 0.08" size="0.28 0.22 0.08" material="brushed_metal_mat"/>
-      <geom name="tele_base_cover" type="box" pos="0 0 0.12" size="0.26 0.2 0.04" rgba="0.88 0.90 0.93 1"/>
+      <geom name="tele_base_cover" type="box" pos="0 0 0.12" size="0.26 0.2 0.04" rgba="0.72 0.75 0.78 1"/>
 
       <!-- Hydraulic column - lower section -->
       <geom name="tele_hydraulic_base" type="cylinder" pos="0 0 0.25" size="0.08 0.13" material="chrome_mat"/>
@@ -724,14 +988,14 @@
       <geom name="tele_extension_handle" type="cylinder" pos="0 0.58 1.31" size="0.012 0.08" material="chrome_mat" euler="0 90 0"/>
 
       <!-- Side drawer compartment -->
-      <geom name="tele_drawer_body" type="box" pos="0.25 0 1.05" size="0.08 0.15 0.12" rgba="0.88 0.90 0.93 1"/>
-      <geom name="tele_drawer_front" type="box" pos="0.32 0 1.05" size="0.01 0.14 0.11" rgba="0.85 0.88 0.9 1"/>
+      <geom name="tele_drawer_body" type="box" pos="0.25 0 1.05" size="0.08 0.15 0.12" rgba="0.72 0.75 0.78 1"/>
+      <geom name="tele_drawer_front" type="box" pos="0.32 0 1.05" size="0.01 0.14 0.11" rgba="0.76 0.78 0.80 1"/>
       <geom name="tele_drawer_handle" type="cylinder" pos="0.33 0 1.08" size="0.008 0.04" material="chrome_mat" euler="0 90 0"/>
 
       <!-- Instrument holders on main tray -->
-      <geom name="tele_holder1" type="box" pos="0.15 0.15 1.28" size="0.12 0.08 0.01" rgba="0.9 0.92 0.95 1"/>
-      <geom name="tele_holder2" type="box" pos="-0.15 0.15 1.28" size="0.12 0.08 0.01" rgba="0.9 0.92 0.95 1"/>
-      <geom name="tele_holder3" type="box" pos="0 -0.15 1.28" size="0.15 0.08 0.01" rgba="0.9 0.92 0.95 1"/>
+      <geom name="tele_holder1" type="box" pos="0.15 0.15 1.28" size="0.12 0.08 0.01" rgba="0.78 0.80 0.82 1"/>
+      <geom name="tele_holder2" type="box" pos="-0.15 0.15 1.28" size="0.12 0.08 0.01" rgba="0.78 0.80 0.82 1"/>
+      <geom name="tele_holder3" type="box" pos="0 -0.15 1.28" size="0.15 0.08 0.01" rgba="0.78 0.80 0.82 1"/>
 
       <!-- Surgical instruments on trays -->
       <geom name="tele_scalpel" type="cylinder" pos="0.15 0.15 1.31" size="0.005 0.06" rgba="0.75 0.78 0.82 1" euler="0 90 0"/>
@@ -742,7 +1006,7 @@
       <geom name="tele_clamp2" type="cylinder" pos="-0.2 0.15 1.31" size="0.004 0.06" rgba="0.77 0.80 0.83 1" euler="0 90 -20"/>
 
       <!-- Sponge bowl on extension tray -->
-      <geom name="tele_bowl" type="cylinder" pos="0 0.38 1.34" size="0.06 0.02" rgba="0.9 0.92 0.95 1"/>
+      <geom name="tele_bowl" type="cylinder" pos="0 0.38 1.34" size="0.06 0.02" rgba="0.78 0.80 0.82 1"/>
       <geom name="tele_sponges" type="box" pos="0 0.38 1.36" size="0.04 0.04 0.015" rgba="0.95 0.98 1.0 1"/>
 
       <!-- Medicine cups -->
@@ -763,7 +1027,7 @@
       <geom name="tele_waste_bag" type="box" pos="0.38 0.2 0.95" size="0.08 0.08 0.12" rgba="0.9 0.95 1.0 0.7"/>
 
       <!-- Height indicator scale -->
-      <geom name="tele_scale_plate" type="box" pos="-0.12 0 0.85" size="0.015 0.04 0.15" rgba="0.85 0.88 0.9 1"/>
+      <geom name="tele_scale_plate" type="box" pos="-0.12 0 0.85" size="0.015 0.04 0.15" rgba="0.76 0.78 0.80 1"/>
       <geom name="tele_scale_mark1" type="box" pos="-0.115 0 0.75" size="0.001 0.02 0.005" rgba="0.2 0.2 0.2 1"/>
       <geom name="tele_scale_mark2" type="box" pos="-0.115 0 0.85" size="0.001 0.02 0.005" rgba="0.2 0.2 0.2 1"/>
       <geom name="tele_scale_mark3" type="box" pos="-0.115 0 0.95" size="0.001 0.02 0.005" rgba="0.2 0.2 0.2 1"/>
@@ -778,76 +1042,6 @@
       <!-- Anti-tip stabilizer bars -->
       <geom name="tele_stabilizer1" type="box" pos="0.25 0 0.1" size="0.05 0.02 0.01" material="metal_mat"/>
       <geom name="tele_stabilizer2" type="box" pos="-0.25 0 0.1" size="0.05 0.02 0.01" material="metal_mat"/>
-    </body>
-
-    <!-- Wall-Mounted Medical Equipment -->
-    <!-- Medical Gas Outlet Panel - Left Wall -->
-    <body name="gas_panel_left" pos="-5.85 0 1.5">
-      <geom name="gas_panel_base_l" type="box" size="0.02 0.4 0.15" material="metal_mat"/>
-      <geom name="gas_outlet_o2_l" type="cylinder" pos="0.025 -0.2 0" size="0.03 0.01" material="gas_oxygen" euler="0 90 0"/>
-      <geom name="gas_outlet_vac_l" type="cylinder" pos="0.025 -0.1 0" size="0.03 0.01" material="gas_suction" euler="0 90 0"/>
-      <geom name="gas_outlet_air_l" type="cylinder" pos="0.025 0 0" size="0.03 0.01" material="gas_air" euler="0 90 0"/>
-      <geom name="gas_outlet_n2o_l" type="cylinder" pos="0.025 0.1 0" size="0.03 0.01" material="blue_accent" euler="0 90 0"/>
-      <geom name="gas_gauge_l" type="cylinder" pos="0.025 0.25 0" size="0.04 0.01" material="chrome_mat" euler="0 90 0"/>
-    </body>
-
-    <!-- Medical Gas Outlet Panel - Right Wall -->
-    <body name="gas_panel_right" pos="5.85 0 1.5">
-      <geom name="gas_panel_base_r" type="box" size="0.02 0.4 0.15" material="metal_mat"/>
-      <geom name="gas_outlet_o2_r" type="cylinder" pos="-0.025 -0.2 0" size="0.03 0.01" material="gas_oxygen" euler="0 90 0"/>
-      <geom name="gas_outlet_vac_r" type="cylinder" pos="-0.025 -0.1 0" size="0.03 0.01" material="gas_suction" euler="0 90 0"/>
-      <geom name="gas_outlet_air_r" type="cylinder" pos="-0.025 0 0" size="0.03 0.01" material="gas_air" euler="0 90 0"/>
-      <geom name="gas_outlet_n2o_r" type="cylinder" pos="-0.025 0.1 0" size="0.03 0.01" material="blue_accent" euler="0 90 0"/>
-      <geom name="gas_gauge_r" type="cylinder" pos="-0.025 0.25 0" size="0.04 0.01" material="chrome_mat" euler="0 90 0"/>
-    </body>
-
-    <!-- Digital Surgery Timer/Clock - Back Wall -->
-    <body name="surgery_clock" pos="0 -5.85 2.5">
-      <geom name="clock_base" type="box" size="0.5 0.02 0.2" rgba="0.2 0.2 0.2 1"/>
-      <geom name="clock_screen" type="box" pos="0 0.021 0" size="0.45 0.005 0.15" material="screen_mat"/>
-      <geom name="clock_text_placeholder" type="box" pos="0 0.028 0" size="0.3 0.001 0.08" rgba="0.2 1.0 0.2 0.8"/>
-    </body>
-
-    <!-- Wall-Mounted Anesthesia Monitor - Left Wall -->
-    <body name="wall_monitor" pos="-5.85 -2 1.8">
-      <!-- Swing arm -->
-      <geom name="monitor_arm1" type="box" pos="0.1 0 0" size="0.1 0.03 0.03" material="metal_mat"/>
-      <geom name="monitor_arm2" type="box" pos="0.25 0.15 0" size="0.03 0.2 0.03" material="metal_mat"/>
-      <!-- Monitor body -->
-      <body name="monitor_head" pos="0.3 0.35 0">
-        <geom name="wall_monitor_case" type="box" size="0.05 0.25 0.2" material="equipment_mat"/>
-        <geom name="wall_monitor_screen" type="box" pos="0.051 0 0" size="0.005 0.22 0.18" material="screen_mat"/>
-        <geom name="wall_monitor_led" type="cylinder" pos="0.051 -0.2 0.15" size="0.01 0.005" material="green_mat" euler="0 90 0"/>
-      </body>
-    </body>
-
-    <!-- Intercom & Control Panel - Back Wall -->
-    <body name="room_control" pos="2 -5.85 1.5">
-      <geom name="control_panel_base" type="box" size="0.2 0.02 0.3" material="metal_mat"/>
-      <geom name="control_screen" type="box" pos="0 0.021 0.1" size="0.15 0.005 0.1" material="screen_mat"/>
-      <geom name="intercom_mic" type="cylinder" pos="-0.1 0.021 -0.15" size="0.02 0.005" rgba="0.1 0.1 0.1 1" euler="90 0 0"/>
-      <geom name="control_button1" type="box" pos="0.05 0.021 -0.1" size="0.03 0.005 0.03" material="green_mat"/>
-      <geom name="control_button2" type="box" pos="0.12 0.021 -0.1" size="0.03 0.005 0.03" material="red_accent"/>
-    </body>
-
-    <!-- Emergency Stop / Alarm - Left Wall -->
-    <body name="emergency_alarm" pos="-5.85 2.5 1.5">
-      <geom name="alarm_base" type="box" size="0.02 0.1 0.1" rgba="1 1 1 1"/>
-      <geom name="alarm_button" type="cylinder" pos="0.021 0 0" size="0.05 0.02" material="red_accent" euler="0 90 0"/>
-      <geom name="alarm_label" type="box" pos="0.021 0 0.07" size="0.001 0.08 0.02" material="red_accent"/>
-    </body>
-
-    <!-- Recessed Storage Cabinet - Front Wall -->
-    <body name="storage_cabinet" pos="3.5 5.85 1.5">
-      <geom name="cabinet_frame" type="box" size="0.8 0.05 1.0" material="metal_mat"/>
-      <geom name="cabinet_shelf1" type="box" pos="0 -0.02 -0.5" size="0.75 0.04 0.02" material="chrome_mat"/>
-      <geom name="cabinet_shelf2" type="box" pos="0 -0.02 0" size="0.75 0.04 0.02" material="chrome_mat"/>
-      <geom name="cabinet_shelf3" type="box" pos="0 -0.02 0.5" size="0.75 0.04 0.02" material="chrome_mat"/>
-      <!-- Glass doors (semi-transparent) -->
-      <geom name="cabinet_door_l" type="box" pos="-0.38 0.03 0" size="0.36 0.01 0.95" rgba="0.8 0.9 1.0 0.3"/>
-      <geom name="cabinet_door_r" type="box" pos="0.38 0.03 0" size="0.36 0.01 0.95" rgba="0.8 0.9 1.0 0.3"/>
-      <geom name="cabinet_handle_l" type="cylinder" pos="-0.05 0.05 0" size="0.01 0.08" material="chrome_mat"/>
-      <geom name="cabinet_handle_r" type="cylinder" pos="0.05 0.05 0" size="0.01 0.08" material="chrome_mat"/>
     </body>
 
     <!-- Camera position indicator (for reference) -->
